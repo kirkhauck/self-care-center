@@ -11,26 +11,27 @@
       <header>
         <h1 class="header">✨ Self Care Center ✨</h1>
       </header>
-      <div class="parent-box-name-tbd">
+      <div class="parent-message-selector-box">
         <h2 class="header">Which type of message?</h2>
         <section class="message-selector-box">
           <form>
             <div class="affirmation-container">
-              <input type="radio" value="affirmation"/>
+              <input type="radio" name="message-select" id="affirmation-select" value="affirmation" checked="checked"/>
               <label for="affirmation">affirmation</label>
             </div>
             <div class="mantra-container">
-              <input type="radio" value="mantra"/>
+              <input type="radio" name="message-select" id="mantra-select" value="mantra"/>
               <label for="mantra">mantra</label>
             </div>
           </form>
-          <button>Receive Message</button>
+          <button class="receive-message-button">Receive Message</button>
         </section>
       </div>
-      <section class="message-box">
-        <img class="meditator" src="assets/meditate.svg" alt="meditator">
+      <section id="message-box" class="message-box">
+        <img id="meditator" class="meditator" src="assets/meditate.svg" alt="meditator">
       </section>
     </main>
+    <script type="text/javascript" src="./src/messages.js"></script>
     <script type="text/javascript" src="./src/main.js"></script>
   </body>
 </html>

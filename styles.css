@@ -30,7 +30,12 @@ h2 {
     margin-block-end: 10px;
 }
 
-.parent-box-name-tbd {
+p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.parent-message-selector-box {
     margin: 40px;
 }
 
@@ -45,15 +50,6 @@ form {
 input[type=radio] {
     transform: scale(1.5);
     margin-right: 20px;
-}
-
-button {
-    background-color: #134d71;
-    color: #ffffff;
-    text-align: center;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
 }
 
 label {
@@ -72,6 +68,16 @@ button {
     margin-top: 10px;
     font-family: 'Quicksand', sans-serif;
     font-size: 18px;
+    background-color: #134d71;
+    color: #ffffff;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.none {
+    display: none;
 }
 
 .meditator {
@@ -89,6 +95,9 @@ button {
     width: 860px;
     height: 160px;
     margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header {
