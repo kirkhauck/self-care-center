@@ -1,11 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="en">  
   <head>
+    <title>Self Care Center</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-  
+    <main>
+      <header>
+        <h1 class="header">✨ Self Care Center ✨</h1>
+      </header>
+      <div class="parent-box-name-tbd">
+        <h2 class="header">Which type of message?</h2>
+        <section class="message-selector-box">
+          <form>
+            <div class="affirmation-container">
+              <input type="radio" value="affirmation"/>
+              <label for="affirmation">affirmation</label>
+            </div>
+            <div class="mantra-container">
+              <input type="radio" value="mantra"/>
+              <label for="mantra">mantra</label>
+            </div>
+          </form>
+          <button>Receive Message</button>
+        </section>
+      </div>
+      <section class="message-box">
+        <img class="meditator" src="assets/meditate.svg" alt="meditator">
+      </section>
+    </main>
     <script type="text/javascript" src="./src/main.js"></script>
   </body>
 </html>
