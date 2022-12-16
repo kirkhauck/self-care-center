@@ -55,6 +55,7 @@ input[type=radio] {
     margin-right: 20px;
 }
 
+
 label {
     font-size: 20px;
     font-style: italic;
@@ -63,6 +64,10 @@ label {
 section {
     background-color: #ffffff;
     border-radius: 10px;
+}
+
+.saved-view {
+    background-color: transparent;
 }
 
 #favorite-buttons-box {
