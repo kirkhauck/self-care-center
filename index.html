@@ -11,7 +11,7 @@
       <header>
         <h1 class="header">✨ Self Care Center ✨</h1>
       </header>
-      <div class="parent-message-selector-box">
+      <div id="parent-message-selector-box" class="parent-message-selector-box">
         <h2 class="header">Which type of message?</h2>
         <section class="message-selector-box">
           <form>
@@ -24,13 +24,16 @@
               <label for="mantra">mantra</label>
             </div>
           </form>
-          <button class="receive-message-button">Receive Message</button>
+          <button id="receive-message-button" class="receive-message-button">Receive Message</button>
         </section>
       </div>
       <section id="message-box" class="message-box">
         <img id="meditator" class="meditator" src="assets/meditate.svg" alt="meditator">
       </section>
-      <button id="favorite-button" class="none">Favorite Message</button>
+      <section id="favorite-buttons-box" class="favorite-buttons-box">
+        <button id="favorite-button" class="none">Favorite Message</button>
+        <button id="view-favorites-button" class="none">View Favorites</button>
+      </section>
     </main>
     <script type="text/javascript" src="./src/messages.js"></script>
     <script type="text/javascript" src="./src/main.js"></script>

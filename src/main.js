@@ -1,12 +1,20 @@
-var receiveMessageButton = document.querySelector('.receive-message-button');
-var meditator = document.querySelector('#meditator');
+var messageSelectorBox = document.querySelector('#parent-message-selector-box')
 var messageBox = document.querySelector('#message-box')
+var favoriteButtonsBox = document.querySelector('#favorite-buttons-box')
+var meditator = document.querySelector('#meditator');
+var receiveMessageButton = document.querySelector('#receive-message-button');
 var favoriteButton = document.querySelector('#favorite-button')
+var viewFavoritesButton = document.querySelector('#view-favorites-button')
 var randomMessage;
 var favoriteMessages = [];
 
+
+
 receiveMessageButton.addEventListener('click', receiveMessage);
 favoriteButton.addEventListener('click', favorite);
+viewFavoritesButton.addEventListener('click', viewFavorites);
+
+
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -15,6 +23,7 @@ function getRandomIndex(array) {
 function receiveMessage() {
   meditator.classList.add('none');
   favoriteButton.classList.remove('none');
+  viewFavoritesButton.classList.remove('none');
   if (document.querySelector('#affirmation-select').checked) {
     randomMessage = affirmations[getRandomIndex(affirmations)];
     console.log(randomMessage)
@@ -45,4 +54,10 @@ function favorite() {
     favoriteMessages.push(randomMessage);
     console.log(favoriteMessages);
   }
+}
+
+function viewFavorites() {
+  messageSelectorBox.classList.add('none')
+  messageBox.classList.add('none')
+  favoriteButtonsBox.classList.add('none')
 }

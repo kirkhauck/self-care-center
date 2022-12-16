@@ -7,6 +7,9 @@ white - #ffffff;
 black - #000000; */
 
 
+.none {
+    display: none !important;
+}
 
 body {
     height: 100vh;
@@ -62,6 +65,10 @@ section {
     border-radius: 10px;
 }
 
+#favorite-buttons-box {
+    background-color: transparent;
+}
+
 button {
     width: 200px;
     height: 30px;
@@ -77,9 +84,6 @@ button {
     cursor: pointer;
 }
 
-.none {
-    display: none;
-}
 
 .meditator {
     width: 80px;
