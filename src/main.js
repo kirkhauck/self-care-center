@@ -6,7 +6,7 @@ var randomMessage;
 var favoriteMessages = [];
 
 receiveMessageButton.addEventListener('click', receiveMessage);
-favoriteButton.addEventListener('click', toggleFavorite);
+favoriteButton.addEventListener('click', favorite);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
