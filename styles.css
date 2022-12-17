@@ -120,7 +120,7 @@ button {
     align-items: center;
 }
 
-.favorited-messages-box {
+.favorited-messages-section {
     width: 860px;
     padding: 10px;
     display: flex;

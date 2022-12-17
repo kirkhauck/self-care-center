@@ -1,7 +1,7 @@
 var messageSelectorBox = document.querySelector('#parent-message-selector-box')
 var messageBox = document.querySelector('#message-box')
 var favoriteButtonsBox = document.querySelector('#favorite-buttons-box')
-var favoritedMessagesBox = document.querySelector('#favorited-messages-box')
+var favoritedMessagesSection = document.querySelector('#favorited-messages-section')
 var savedView = document.querySelector('#saved-view')
 var meditator = document.querySelector('#meditator');
 var receiveMessageButton = document.querySelector('#receive-message-button');
@@ -17,6 +17,7 @@ receiveMessageButton.addEventListener('click', receiveMessage);
 favoriteButton.addEventListener('click', favorite);
 viewFavoritesButton.addEventListener('click', viewFavorites);
 viewHomeButton.addEventListener('click', viewHome)
+document.addEventListener('click', deleteMessage)
 
 
 
@@ -55,7 +56,7 @@ function favorite() {
 
     if(messageSaved === false) {
     favoriteMessages.push(randomMessage);
-    favoritedMessagesBox.innerHTML +=
+    favoritedMessagesSection.innerHTML +=
     `
     <div class="delete-message-box">
       <button id="id=delete-message-button" class="delete-message-button">X</button>
@@ -77,4 +78,21 @@ function viewHome() {
   messageSelectorBox.classList.remove('none')
   messageBox.classList.remove('none')
   favoriteButtonsBox.classList.remove('none')
+}
+
+function deleteMessage(event) {
+  var element = event.target;
+  var deleteBox;
+  var favoriteMessage;
+  
+  if (element.classList.contains("delete-message-button")) {
+    deleteBox = event.target.parentElement;
+    favoriteMessage = deleteBox.lastElementChild.innerText;
+    for (i = 0; i < favoriteMessages.length; i++) {
+      if (favoriteMessage === favoriteMessages[i]) {
+        favoriteMessages.splice(i, 1);
+        deleteBox.remove();
+      }
+    }
+  }
 }
