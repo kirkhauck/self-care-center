@@ -59,7 +59,7 @@ function favorite() {
     favoritedMessagesSection.innerHTML +=
     `
     <div class="delete-message-box">
-      <button id="id=delete-message-button" class="delete-message-button">X</button>
+      <button class="js-delete-message">X</button>
       <p class="favorited-message">${randomMessage}</p>
     </div>
     `;
@@ -85,7 +85,7 @@ function deleteMessage(event) {
   var deleteBox;
   var favoriteMessage;
   
-  if (element.classList.contains("delete-message-button")) {
+  if (element.classList.contains("js-delete-message")) {
     deleteBox = event.target.parentElement;
     favoriteMessage = deleteBox.lastElementChild.innerText;
     for (i = 0; i < favoriteMessages.length; i++) {

@@ -33,48 +33,6 @@ h2 {
     margin-block-end: 10px;
 }
 
-p {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 20px;
-}
-
-.parent-message-selector-box {
-    margin: 40px;
-}
-
-form {
-    padding: 1em;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-}
-
-input[type=radio] {
-    transform: scale(1.5);
-    margin-right: 20px;
-}
-
-
-label {
-    font-size: 20px;
-    font-style: italic;
-}
-
-section {
-    background-color: #ffffff;
-    border-radius: 10px;
-}
-
-.saved-view {
-    background-color: transparent;
-}
-
-.favorite-buttons-box {
-    background-color: transparent;
-}
-
 button {
     width: 200px;
     height: 30px;
@@ -90,12 +48,56 @@ button {
     cursor: pointer;
 }
 
-.delete-message-button {
-    font-size: 14px;
+p {
+    font-size: 24px;
     font-weight: bold;
-    width: 18px;
-    height: 18px;
-    margin: 0px;
+    margin: 20px;
+}
+
+form {
+    padding: 1em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+input[type=radio] {
+    transform: scale(1.5);
+    margin-right: 20px;
+}
+
+label {
+    font-size: 20px;
+    font-style: italic;
+}
+
+section {
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.header {
+    color: #ffffff;
+}
+
+.parent-message-selector-box {
+    margin: 40px;
+}
+
+.message-selector-box {
+    width: 580px;
+    height: 110px;
+}
+
+.favorite-buttons-box {
+    background-color: transparent;
+}
+
+.message-box {
+    width: 860px;
+    height: 160px;
+    margin-top: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,18 +108,8 @@ button {
     height: auto;
 }
 
-.message-selector-box {
-    width: 580px;
-    height: 110px;
-}
-
-.message-box {
-    width: 860px;
-    height: 160px;
-    margin-top: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.saved-view {
+    background-color: transparent;
 }
 
 .favorited-messages-section {
@@ -135,9 +127,17 @@ button {
 }
 
 .favorited-message {
-    margin: 10px
+    margin: 10px;
+    text-align: left;
 }
 
-.header {
-    color: #ffffff;
+.js-delete-message {
+    font-size: 14px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
