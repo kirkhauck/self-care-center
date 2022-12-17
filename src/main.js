@@ -1,6 +1,7 @@
 var messageSelectorBox = document.querySelector('#parent-message-selector-box')
 var messageBox = document.querySelector('#message-box')
 var favoriteButtonsBox = document.querySelector('#favorite-buttons-box')
+var favoritedMessagesBox = document.querySelector('#favorited-messages-box')
 var savedView = document.querySelector('#saved-view')
 var meditator = document.querySelector('#meditator');
 var receiveMessageButton = document.querySelector('#receive-message-button');
@@ -29,14 +30,12 @@ function receiveMessage() {
   viewFavoritesButton.classList.remove('none');
   if (document.querySelector('#affirmation-select').checked) {
     randomMessage = affirmations[getRandomIndex(affirmations)];
-    console.log(randomMessage)
     messageBox.innerHTML =
       `
       <p>${randomMessage}</p>
       `
   } else if (document.querySelector('#mantra-select').checked) {
     randomMessage = mantras[getRandomIndex(mantras)];
-    console.log(randomMessage)
     messageBox.innerHTML =
     `
     <p>${randomMessage}</p>
@@ -45,7 +44,7 @@ function receiveMessage() {
 }
 
 function favorite() {
-  var messageSaved;
+  var messageSaved = false;
 
   for (i = 0; i < favoriteMessages.length; i++) {
     if (randomMessage === favoriteMessages[i]) {
@@ -53,9 +52,9 @@ function favorite() {
     }
   }
 
-    if(!messageSaved) {
+    if(messageSaved === false) {
     favoriteMessages.push(randomMessage);
-    console.log(favoriteMessages);
+    favoritedMessagesBox.innerHTML += `<p class="favorited-message">${randomMessage}</p>`;
   }
 }
 

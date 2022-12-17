@@ -36,6 +36,7 @@ h2 {
 p {
     font-size: 24px;
     font-weight: bold;
+    margin: 20px;
 }
 
 .parent-message-selector-box {
@@ -70,7 +71,7 @@ section {
     background-color: transparent;
 }
 
-#favorite-buttons-box {
+.favorite-buttons-box {
     background-color: transparent;
 }
 
@@ -108,6 +109,19 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.favorited-messages-box {
+    width: 860px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.favorited-message {
+    margin: 10px
 }
 
 .header {
