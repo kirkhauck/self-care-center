@@ -90,11 +90,20 @@ button {
     cursor: pointer;
 }
 
+.delete-message-button {
+    font-size: 14px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .meditator {
     width: 80px;
     height: auto;
-    margin: 4%
 }
 
 .message-selector-box {
@@ -118,6 +127,11 @@ button {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+}
+
+.delete-message-box {
+    display: inline-flex;
+    align-items: center;
 }
 
 .favorited-message {

@@ -45,6 +45,7 @@ function receiveMessage() {
 
 function favorite() {
   var messageSaved = false;
+  // var messageNumber = Date.now();
 
   for (i = 0; i < favoriteMessages.length; i++) {
     if (randomMessage === favoriteMessages[i]) {
@@ -54,7 +55,13 @@ function favorite() {
 
     if(messageSaved === false) {
     favoriteMessages.push(randomMessage);
-    favoritedMessagesBox.innerHTML += `<p class="favorited-message">${randomMessage}</p>`;
+    favoritedMessagesBox.innerHTML +=
+    `
+    <div class="delete-message-box">
+      <button id="id=delete-message-button" class="delete-message-button">X</button>
+      <p class="favorited-message">${randomMessage}</p>
+    </div>
+    `;
   }
 }
 
